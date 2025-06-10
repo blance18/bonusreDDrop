@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>🔥 -30% на всю продукцию — только в Telegram</title>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Unbounded', sans-serif;
+      background: #fff;
+      color: #000;
+      line-height: 1.6;
+    }
+    header {
+      background: #000;
+      color: #fff;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    header nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 10px;
+    }
+    header nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    .subtitle {
+      color: #555;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 14px 28px;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background: #333;
+    }
+    .anchor-section {
+      padding: 60px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .anchor-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+    .anchor-section p {
+      margin-bottom: 15px;
+      color: #111;
+    }
+    .faq {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    details {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    summary {
+      font-weight: bold;
+      list-style: none;
+      position: relative;
+      padding-right: 20px;
+    }
+    summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+    }
+    details[open] summary::after {
+      content: '-';
+    }
+    details p {
+      margin-top: 10px;
+    }
+    .form-block {
+      background: #f9f9f9;
+      padding: 30px;
+      border-radius: 10px;
+      margin-bottom: 60px;
+    }
+    .form-block h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-family: inherit;
+    }
+    form button {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+    form button:hover {
+      background: #333;
+    }
+    .contact-panel {
+      background: #111;
+      color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .contact-panel a {
+      color: #fff;
+      display: inline-block;
+      margin: 10px 15px;
+      text-decoration: underline;
+    }
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+    footer .label {
+      display: block;
+      font-size: 0.8rem;
+      margin-top: 10px;
+      color: #888;
+    }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      .btn { padding: 12px 20px; }
+      header { padding: 20px; flex-direction: column; align-items: flex-start; }
+      header nav { flex-direction: column; align-items: flex-start; gap: 10px; margin-top: 10px; }
+    }
+  
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .menu-icon {
+    display: block;
+    color: white;
+    margin-top: 10px;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  #menu-toggle:checked + .menu-icon + .menu {
+    display: flex;
+  }
+
+  header nav a {
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .anchor-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .anchor-section p {
+    font-size: 0.95rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 12px 18px;
+    width: 100%;
+    max-width: 320px;
+  }
+
+  details {
+    padding: 12px;
+  }
+
+  form input, form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .contact-panel {
+    padding: 20px;
+  }
+
+  .contact-panel p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 30px 16px;
+    font-size: 0.8rem;
+  }
+
+  body {
+    padding: 0 10px;
+  }
+
+  .section, .anchor-section {
+    padding: 40px 16px;
+  }
+}
+</style>
+</head>
+<body>
+<header>
+<div><a href="https://t.me/+G4v3j1hnTLA2Zjdi" style="color: white; text-decoration: none; font-weight: bold;" target="_blank">Alliance Project</a></div>
+
+
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-icon" for="menu-toggle">☰</label>
+<nav class="menu">
+<a href="#about">О нас</a>
+<a href="#reddrop">reDDrop</a>
+<a href="#faq">FAQ</a>
+<a href="#alliance">Alliance</a>
+<a href="#contact">Контакты</a>
+<a href="#giveaway">Розыгрыш</a>
+</nav>
+</header>
+<section class="section" id="about">
+<h1>🔥 -30% на всю продукцию — только в Telegram</h1>
+<p class="subtitle">reDDrop x Alliance — запуск уже сегодня</p>
+<p>Никаких лишних слов. Только стиль, момент и точка входа в то, что не для всех.</p>
+<p>Оформление, подача и внутренняя энергия — узнаёшь сразу. Остальное внутри.</p>
+<a class="btn" href="https://t.me/+Ein5E1zdzYtiNjQ6" target="_blank">Войти в Telegram</a>
+</section>
+<section class="anchor-section" id="reddrop">
+<h2>Больше, чем продукт</h2>
+<p>Мы не продаём. Мы создаём момент. Упакованный, точный, лимитированный. Он не висит на полке. Он исчезает — потому что его ждут.</p>
+<p>Ты узнаешь это с первого касания. Это легкость, которой доверяют. Минимум лишнего — максимум смысла. reDDrop — как код: понятен только тем, кому нужно.</p>
+<p>Внутри — релизы, образы, доступ туда, куда не попасть случайно. Подписка открывает больше, чем просто канал. Это проход внутрь.</p>
+<p>Каждая деталь — осознанна. Каждая партия — точна. reDDrop не повторяется. Оно происходит.</p>
+<p>Следи за обновлениями и участвуй в розыгрыше на <a href="https://alliancex.online" target="_blank">alliancex.online</a></p>
+<a class="btn" href="https://t.me/+Ein5E1zdzYtiNjQ6" target="_blank">Присоединиться</a>
+</section>
+<section class="anchor-section">
+<div class="form-block">
+<h2>Задать вопрос или получить консультацию</h2>
+<form id="telegramForm">
+<input placeholder="Ваше имя*" required="" type="text"/>
+<input placeholder="@username в Telegram*" required="" type="text"/>
+<input placeholder="Email (по желанию)" type="email"/>
+<input placeholder="Задайте ваш вопрос (по желанию)" type="text"/>
+<button type="submit">Отправить</button>
+</form>
+</div>
+</section>
+<section class="anchor-section" id="faq">
+<h2>Частые вопросы</h2>
+<div class="faq">
+<details><summary>Что внутри?</summary><p>Только то, что не найти в рознице. Лимит. Образ. Вовлечённость. Всё — по подписке.</p></details>
+<details><summary>Как попасть?</summary><p>Первый шаг — Telegram. Остальное увидишь сам. Мы не объясняем — мы намекаем.</p></details>
+<details><summary>Почему всё так скрытно?</summary><p>Потому что это не для всех. Продукт — это следствие. Сначала — стиль и код.</p></details>
+</div>
+</section>
+<section class="anchor-section" id="alliance">
+<h2>О платформе Alliance</h2>
+<p>Мы поддерживаем тех, кто делает иначе. Кто не гонится за массовостью. Кто вкладывает в продукт то, что невозможно скопировать: правду, стиль, вкус.</p>
+<p>Alliance помогает проектам развиваться и находить своих. Мы даём инструменты и свободу. Остальное — дело характера. reDDrop — одно из лучших тому подтверждений.</p>
+</section>
+<section class="anchor-section" id="giveaway">
+<h2>Участвуй в розыгрыше</h2>
+<p><strong>15 июня от reDDrop</strong>: разыгрываем <strong>10 промокодов по 100₽</strong>, <strong>сертификат на 1 000₽</strong> и <strong>box с 3 продуктами</strong>.</p>
+<p>Подпишись на <a href="https://t.me/+Ein5E1zdzYtiNjQ6" target="_blank">Telegram-канал</a> и следи за новостями. Все подписчики участвуют автоматически.</p>
+<p><strong>Розыгрыши также на платформе</strong> <a href="https://alliancex.online" target="_blank">alliancex.online</a> — всё это часть единого движения.</p>
+<a class="btn" href="https://t.me/+Ein5E1zdzYtiNjQ6" style="margin-top: 20px;" target="_blank">Участвовать</a>
+</section>
+<section class="anchor-section" id="contact">
+<div class="contact-panel">
+<h2>Контакты</h2>
+<p><a href="https://t.me/+GDMjtvBxOQY0MzRi" target="_blank">Канал reDDrop</a></p>
+<p><a href="https://t.me/reddropall" target="_blank">Менеджер reDDrop</a></p>
+<p><a href="https://t.me/+G4v3j1hnTLA2Zjdi" target="_blank">Канал Alliance</a></p>
+<p><a href="https://t.me/allianceex" target="_blank">Менеджер Alliance</a></p>
+</div>
+</section>
+<footer>
+<p>
+<a href="https://t.me/+Ein5E1zdzYtiNjQ6" target="_blank">Telegram</a> |
+      <a href="#privacy">Политика конфиденциальности</a>
+</p>
+<p class="label">18+ | Доступ ограничен. Только для тех, кто считывает правильно.</p>
+<p style="margin-top: 10px;">© 2025 · reDDrop x Alliance</p>
+<section class="anchor-section" id="privacy">
+<h2>Политика конфиденциальности</h2>
+<p>Мы уважаем вашу конфиденциальность и обязуемся защищать любую информацию, которую вы предоставляете при использовании этого сайта.</p>
+<p>Собираемая информация включает имя пользователя, Telegram-никнейм и (опционально) адрес электронной почты. Эти данные используются исключительно для обратной связи и предоставления информации о проекте.</p>
+<p>Мы не передаём ваши данные третьим лицам. Все данные хранятся в защищённой форме и используются только в рамках проекта reDDrop x Alliance.</p>
+<p>Используя этот сайт, вы соглашаетесь с нашей политикой конфиденциальности.</p>
+</section>
+</footer>
+<script>
+    document.getElementById('telegramForm')?.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = this;
+      const name = form.querySelector('input[placeholder*="имя"]').value.trim();
+      const username = form.querySelector('input[placeholder*="@username"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      const question = form.querySelector('input[placeholder*="вопрос"]').value.trim();
+      const token = '7449151366:AAH72nV9bRE6lipmr8Boqx5CKSRmWZvC534';
+      const chatId = '6258371389';
+      const message = `📩 Новая заявка:
+👤 Имя: ${name}
+📱 Telegram: ${username}
+📧 Email: ${email || 'не указан'}
+❓ Вопрос: ${question || 'не задан'}`;
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: message })
+      })
+      .then(res => {
+        if (res.ok) {
+          alert('Сообщение отправлено!');
+          form.reset();
+        } else {
+          alert('Ошибка при отправке!');
+        }
+      })
+      .catch(() => alert('Ошибка при отправке!'));
+    });
+  </script>
+</body>
+</html>
